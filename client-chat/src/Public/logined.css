@@ -1,0 +1,385 @@
+.base{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100%;
+
+}
+.friends{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    width: 20%;
+    height: 700px;
+
+    border-radius: 8px;
+    border: 2px solid crimson;
+    background-color: firebrick;
+}
+.best__friend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 90%;
+    height: 60px;
+    margin: 8px;
+
+    border: 2px solid rgb(30, 143, 255);
+    border-radius: 8px;
+    color: white;
+    background-color: rgba(30, 143, 255, 0.615);
+    transition: 0.2s;
+}
+.best__friend:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+.simple__friend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 90%;
+    height: 60px;
+    margin: 8px;
+
+    border: 2px solid black;
+    border-radius: 8px;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.597);
+    transition: 0.2s;
+}
+.simple__friend:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 40%;
+    height: 700px;
+    margin: 0px 16px;
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: relative;
+
+    width: 100%;
+    height: 70px;
+    padding: 5px 0px;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.name__header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 300px;
+    height: 80%;
+
+    color: white;
+    background-color: rgb(30, 120, 175);
+    border-radius: 12px;
+}
+.best__header{
+    background-color: dodgerblue;
+}
+.simple__header{
+    background-color: black;
+}
+.text{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 6px 0px;
+    padding: 0px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.menu__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    color: black;
+    transition: 0.2s;
+}
+.menu__icon:hover{
+    background-color: rgb(30, 120, 175);
+    color: white;
+}
+.basic{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: absolute;
+
+    width: 250px;
+    height: 200px;
+    top: 100%;
+    left: 45%;
+
+    background-color: rgb(30, 120, 175);
+    transition: 0.3s;
+}
+.active{
+    top: 100%;
+    left: 45%;
+    transform: translateY(0px) translateX(0px) scale(1);
+}
+.inactive{
+    top: 0;
+    left: 45%;
+    transform: translateY(-60px) translateX(50px) scale(0);
+}
+.mood{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: 90%;
+    height: 45px;
+    margin: 12px 0px;
+
+    background-color: rgb(30, 120, 175);
+    transition: 0.2s;
+}
+.mood__active::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    transition: 0.2s;
+}
+.mood__inactive::before{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    top: 100%;
+    left: 50%;
+    background-color: white;
+    transition: 0.2s;
+}
+.mood__inactive:hover::before{
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0%;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    width: 100%;
+    min-height: calc(100% - 130px);
+    max-height: auto;
+    margin: 6px 0px;
+
+    background-color: #43506c;
+    border-radius: 8px;
+}
+.content::-webkit-scrollbar{
+    width: 1px;
+}
+.mine{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: auto;
+    margin: 6px;
+}
+.mine__msg{
+    width: auth;
+    height: auto;
+    padding: 8px 16px;
+    margin: 0px 8px;
+
+    border-radius: 8px;
+    background-color: #00e0c7;
+    color: white;
+    transition: 0.2s;
+}
+.mine__msg:hover{
+    background-color: black;
+}
+.other{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: auto;
+    margin: 6px;
+}
+.other__msg{
+    width: auth;
+    height: auto;
+    padding: 8px 16px;
+    margin: 0px 8px;
+
+    border-radius: 8px;
+    background-color: #009394;
+    color: white;
+    transition: 0.2s;
+}
+.other__msg:hover{
+    background-color: black;
+}
+
+
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    width: 80%;
+    height: 60px;
+    margin: 12px 0px;
+
+    background-color: rgb(10, 10, 10);
+    border-radius: 8px;
+    transition: 0.2s;
+}
+.user:hover{
+    background-color: rgb(23, 165, 216);
+    color: white;
+}
+.user:hover span{
+    color: black;
+}
+.user span{
+    font-size: 27px;
+}
+.user h3, span{
+    margin: 0px 20px;
+}
+.user span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    transition: .2s;
+}
+.user span:hover{
+    color: dodgerblue;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+
+    background-color: white;
+    border-radius: 8px;
+}
+
+.controller{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    width: 7%;
+    height: 700px;
+
+    border-radius: 8px;
+    background-color: firebrick;
+}
+
+.logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70%;
+    height: 65px;
+    margin: 6px 0px;
+    font-weight: bold;
+
+    border-radius: 8px;
+    transition: 0.2s;
+
+}
+.logout:hover{
+    color: white;
+    background-color: rgb(23, 165, 216);
+}
+.logout span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.request{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75%;
+    height: 70px;
+    margin: 6px 0px;
+
+    border-radius: 8px;
+    transition: 0.2s;
+}
+.request:hover{
+    background-color: rgb(242, 255, 0);
+    color: black;
+}
+.request span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
